@@ -16,7 +16,7 @@ namespace OpenDataProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OpenDataProject());
+            Application.Run(new OpenDataProject_Loader());
         }
     }
 }
