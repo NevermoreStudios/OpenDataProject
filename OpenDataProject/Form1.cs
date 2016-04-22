@@ -18,7 +18,10 @@ namespace OpenDataProject
         {
             InitializeComponent();
         }
-
+        private string DeStringize(string s)
+        {
+            return s;
+        }
         private void OpenDataProject_Load(object sender, EventArgs e)
         {
 
@@ -37,6 +40,7 @@ namespace OpenDataProject
             dataGridView1.Columns.Add("Broj Odeljenja", "Broj Odeljenja");
             dataGridView1.Columns.Add("Latitude", "Latitude");
             dataGridView1.Columns.Add("Longitude", "Longitude");
+            //dodaj try catch
             WebClient client = new WebClient();
             client.DownloadFile("http://opendata.mpn.gov.rs/get.php?dataset=skole&lang=sr&term=csv", "data.csv");
             StreamReader sr = new StreamReader("data.csv");
@@ -45,7 +49,8 @@ namespace OpenDataProject
             sr.ReadLine();
             while (!sr.EndOfStream)
             {
-                OpenDataProjectCore.Skoles.Add(sr.ReadLine());
+                string skola=sr.ReadLine();
+
                 
             }
         }

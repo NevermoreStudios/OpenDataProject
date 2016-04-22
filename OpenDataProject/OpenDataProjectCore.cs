@@ -9,7 +9,7 @@ namespace OpenDataProject
     static class OpenDataProjectCore
     {
         public static List<skola> Skole=new List<skola>();
-        public static List<string> Skoles =new List<string>();
+        
     }
 
     class skola
