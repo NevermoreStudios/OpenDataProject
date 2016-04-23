@@ -7,3 +7,5 @@ c:\users\temp\documents\visual studio 2015\Projects\OpenDataProject\OpenDataProj
 c:\users\temp\documents\visual studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.exe
 c:\users\temp\documents\visual studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.pdb
 C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.OpenDataProject_Loader.resources
+C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\bin\Debug\GMap.NET.Core.dll
+C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\bin\Debug\GMap.NET.WindowsForms.dll
