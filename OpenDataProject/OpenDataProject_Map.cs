@@ -40,21 +40,11 @@ namespace OpenDataProject
 
             // config map
             MainMap.MapProvider = GMapProviders.OpenStreetMap;
-            MainMap.Position = new PointLatLng(54.6961334816182, 25.2985095977783);
+            MainMap.Position = new PointLatLng(44.735027899515465, 20.533447265625);
             MainMap.MinZoom = 0;
             MainMap.MaxZoom = 24;
             MainMap.Zoom = 9;
 
-            // add your custom map db provider
-            //GMap.NET.CacheProviders.MySQLPureImageCache ch = new GMap.NET.CacheProviders.MySQLPureImageCache();
-            //ch.ConnectionString = @"server=sql2008;User Id=trolis;Persist Security Info=True;database=gmapnetcache;password=trolis;";
-            //MainMap.Manager.SecondaryCache = ch;
-
-            // set your proxy here if need
-            //GMapProvider.WebProxy = new WebProxy("10.2.0.100", 8080);
-            //GMapProvider.WebProxy.Credentials = new NetworkCredential("ogrenci@bilgeadam.com", "bilgeada");
-
-            // map events
             {
                 //MainMap.OnPositionChanged += new PositionChanged(MainMap_OnPositionChanged);
 
@@ -64,7 +54,7 @@ namespace OpenDataProject
                 //MainMap.OnMapZoomChanged += new MapZoomChanged(MainMap_OnMapZoomChanged);
                 //MainMap.OnMapTypeChanged += new MapTypeChanged(MainMap_OnMapTypeChanged);
 
-                //MainMap.OnMarkerClick += new MarkerClick(MainMap_OnMarkerClick);
+                MainMap.OnMarkerClick += new MarkerClick(MainMap_OnMarkerClick);
                 //MainMap.OnMarkerEnter += new MarkerEnter(MainMap_OnMarkerEnter);
                 //MainMap.OnMarkerLeave += new MarkerLeave(MainMap_OnMarkerLeave);
 
@@ -79,10 +69,29 @@ namespace OpenDataProject
                 //MainMap.Manager.OnTileCacheProgress += new TileCacheProgress(OnTileCacheProgress);
             }
         }
-        
+
+
+
+        private void MainMap_OnMarkerClick(GMapMarker item, MouseEventArgs e)
+        {
+           skola res= OpenDataProjectCore.Skole.Find(skola => skola.Lat == item.Position.Lat && skola.Lon == item.Position.Lng);
+            MessageBox.Show(res.ToString());
+        }
+
         private void OpenDataProject_Map_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void MainMap_Load(object sender, EventArgs e)
+        {
+            GMapOverlay overlay = new GMapOverlay("overlay");
+            foreach (skola skola in OpenDataProjectCore.GetFilter("All"))
+            {
+                overlay.Markers.Add(new GMarkerGoogle(new PointLatLng(skola.Lat, skola.Lon),GMarkerGoogleType.red));
+            }
+            MainMap.Overlays.Add(overlay);
+        }
+
     }
 }
