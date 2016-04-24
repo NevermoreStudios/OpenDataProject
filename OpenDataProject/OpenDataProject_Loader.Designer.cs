@@ -52,6 +52,7 @@
             this.Filter.TabIndex = 1;
             this.Filter.Text = "Filter";
             this.Filter.UseVisualStyleBackColor = true;
+            this.Filter.Click += new System.EventHandler(this.Filter_Click);
             // 
             // Sort
             // 
@@ -61,6 +62,7 @@
             this.Sort.TabIndex = 2;
             this.Sort.Text = "Sort";
             this.Sort.UseVisualStyleBackColor = true;
+            this.Sort.Click += new System.EventHandler(this.Sort_Click);
             // 
             // Ptable
             // 
@@ -70,6 +72,7 @@
             this.Ptable.TabIndex = 3;
             this.Ptable.Text = "Pivot Table";
             this.Ptable.UseVisualStyleBackColor = true;
+            this.Ptable.Click += new System.EventHandler(this.Ptable_Click);
             // 
             // Pchart
             // 
@@ -79,6 +82,7 @@
             this.Pchart.TabIndex = 4;
             this.Pchart.Text = "Pivot Chart";
             this.Pchart.UseVisualStyleBackColor = true;
+            this.Pchart.Click += new System.EventHandler(this.Pchart_Click);
             // 
             // Map
             // 
@@ -88,6 +92,7 @@
             this.Map.TabIndex = 5;
             this.Map.Text = "Map";
             this.Map.UseVisualStyleBackColor = true;
+            this.Map.Click += new System.EventHandler(this.Map_Click);
             // 
             // OpenDataProject_Loader
             // 
@@ -102,7 +107,7 @@
             this.Controls.Add(this.progressBar1);
             this.Name = "OpenDataProject_Loader";
             this.Text = "OpenDataProject";
-            this.Load += new System.EventHandler(this.OpenDataProject_Load);
+            this.Load += new System.EventHandler(this.OpenDataProject_Loader_Load);
             this.Shown += new System.EventHandler(this.OpenDataProject_Loader_Shown);
             this.ResumeLayout(false);
 

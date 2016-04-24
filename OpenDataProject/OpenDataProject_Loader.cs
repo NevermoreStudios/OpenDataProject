@@ -11,6 +11,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+
 namespace OpenDataProject
 {
     public partial class OpenDataProject_Loader : Form
@@ -18,7 +21,9 @@ namespace OpenDataProject
         public OpenDataProject_Loader()
         {
             InitializeComponent();
-        }
+            
+            }
+     
         private string DeStringize(string s)
         {if (!string.IsNullOrEmpty(s))
             {
@@ -86,16 +91,43 @@ namespace OpenDataProject
             }
         }
 
-        private void OpenDataProject_Load(object sender, EventArgs e)
-        {
-           
-           
-        }
 
         private void OpenDataProject_Loader_Shown(object sender, EventArgs e)
         {
             Startup();
             progressBar1.Value = progressBar1.Maximum;
+        }
+
+        private void OpenDataProject_Loader_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Filter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sort_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ptable_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pchart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Map_Click(object sender, EventArgs e)
+        {
+            OpenDataProject_Map Map = new OpenDataProject_Map();
+            Map.Show();
+            
         }
     }
 }

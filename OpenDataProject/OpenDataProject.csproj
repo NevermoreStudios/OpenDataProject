@@ -85,6 +85,9 @@
     <EmbeddedResource Include="OpenDataProject_Loader.resx">
       <DependentUpon>OpenDataProject_Loader.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OpenDataProject_Map.resx">
+      <DependentUpon>OpenDataProject_Map.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

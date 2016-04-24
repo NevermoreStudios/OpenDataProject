@@ -28,11 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.MainMap = new GMap.NET.WindowsForms.GMapControl();
+            this.SuspendLayout();
+            // 
+            //MainMap
+            // 
+            this.MainMap.Bearing = 0F;
+            this.MainMap.CanDragMap = true;
+            this.MainMap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainMap.EmptyTileColor = System.Drawing.Color.Navy;
+            this.MainMap.GrayScaleMode = false;
+            this.MainMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.MainMap.LevelsKeepInMemmory = 5;
+            this.MainMap.Location = new System.Drawing.Point(0, 0);
+            this.MainMap.Margin = new System.Windows.Forms.Padding(4);
+            this.MainMap.MarkersEnabled = true;
+            this.MainMap.MaxZoom = 17;
+            this.MainMap.MinZoom = 2;
+            this.MainMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.MainMap.Name = "MainMap";
+            this.MainMap.NegativeMode = false;
+            this.MainMap.PolygonsEnabled = true;
+            this.MainMap.RetryLoadTile = 0;
+            this.MainMap.RoutesEnabled = true;
+            this.MainMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.MainMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.MainMap.ShowTileGridLines = false;
+            this.MainMap.Size = new System.Drawing.Size(881, 818);
+            this.MainMap.TabIndex = 0;
+            this.MainMap.Zoom = 0D;
+            // 
+            // OpenDataProject_Map
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.MainMap);
+            this.Name = "OpenDataProject_Map";
             this.Text = "OpenDataProject_Map";
+            this.Load += new System.EventHandler(this.OpenDataProject_Map_Load);
+            this.ResumeLayout(false);
+
         }
 
+
         #endregion
+
+        private GMap.NET.WindowsForms.GMapControl MainMap;
     }
 }
