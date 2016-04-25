@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace OpenDataProject
 {
@@ -44,37 +45,22 @@ namespace OpenDataProject
             //dataGridView1.Columns.Add("Longitude", "Longitude");
             try {
                 WebClient client = new WebClient();
-                client.DownloadFile("http://opendata.mpn.gov.rs/get.php?dataset=skole&lang=sr&term=csv", "data.csv");
-                File.Copy("data.csv", "kes.csv",true);
+                client.DownloadFile("http://opendata.mpn.gov.rs/get.php?dataset=skole&lang=sr&term=json", "data.json");
+                File.Copy("data.json", "kes.json",true);
             }
             catch{
                 MessageBox.Show("Nije moguce preuzeti najnoviju tabelu.\r\nKoristice se kesirana verzija.");
-                File.Copy("kes.csv", "data.csv",true);
+                File.Copy("kes.json", "data.json",true);
             }
-            //TO DO JASON
-            //StreamReader sr = new StreamReader("data.csv");
-            //progressBar1.Maximum = 2000;
-            //sr.ReadLine();
-            //sr.ReadLine();
-            //sr.ReadLine();
-            //while (!sr.EndOfStream)
-            //{
-            //    string skola = sr.ReadLine();
-            //    string[] data = skola.Split(',');
-            //    if (data.Length == 15)  Core.Skole.Add(new Skola(int.Parse(DeStringize(data[0])), DeStringize(data[1]), DeStringize(data[2]), DeStringize(data[3]), DeStringize(data[4]), DeStringize(data[5]), DeStringize(data[6]), DeStringize(data[7]), DeStringize(data[8]), DeStringize(data[9]), DeStringize(data[10]), DeStringize(data[11]), int.Parse(DeStringize(data[12])), double.Parse(DeStringize(data[13])), double.Parse(DeStringize(data[14]))));
-            //    else if(data.Length==17)Core.Skole.Add(new Skola(int.Parse(DeStringize(data[0])), DeStringize(data[1]), DeStringize(data[2]), DeStringize(data[3]), DeStringize(data[4]), DeStringize(data[5]), DeStringize(data[6]), DeStringize(data[7]), DeStringize(data[8]), DeStringize(data[9]), DeStringize(data[10]), DeStringize(data[11]), DeStringize(data[12]), DeStringize(data[13]), int.Parse(DeStringize(data[14])), double.Parse(DeStringize(data[15])), double.Parse(DeStringize(data[16]))));
-            //    else Core.Skole.Add(new Skola(int.Parse(DeStringize(data[0])), DeStringize(data[1]), DeStringize(data[2]), DeStringize(data[3]), DeStringize(data[4]), DeStringize(data[5]), DeStringize(data[6]), DeStringize(data[7]), DeStringize(data[8]), DeStringize(data[9]), DeStringize(data[10]), DeStringize(data[11]), int.Parse(DeStringize(data[12])), double.Parse(DeStringize(data[13])), double.Parse(DeStringize(data[13]))));
-            //    progressBar1.PerformStep();
-            //    //string[] row = OpenDataProjectCore.Skole.ElementAt(OpenDataProjectCore.Skole.Count - 1).ToRow();
-            //    //dataGridView1.Rows.Add(row);
-            //}
+            StreamReader sr = new StreamReader("data.json");
+            string json=sr.ReadToEnd();
+            Core.Skole = JsonConvert.DeserializeObject<List<Skola>>(json);
         }
 
 
         private void OpenDataProject_Loader_Shown(object sender, EventArgs e)
         {
             Startup();
-            progressBar1.Value = progressBar1.Maximum;
             Filter.Show();
             Sort.Show();
             Ptable.Show();

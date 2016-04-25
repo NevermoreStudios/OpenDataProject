@@ -28,21 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.Filter = new System.Windows.Forms.Button();
             this.Sort = new System.Windows.Forms.Button();
             this.Ptable = new System.Windows.Forms.Button();
             this.Pchart = new System.Windows.Forms.Button();
             this.Map = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(13, 13);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(259, 23);
-            this.progressBar1.Step = 1;
-            this.progressBar1.TabIndex = 0;
             // 
             // Filter
             // 
@@ -109,7 +100,6 @@
             this.Controls.Add(this.Ptable);
             this.Controls.Add(this.Sort);
             this.Controls.Add(this.Filter);
-            this.Controls.Add(this.progressBar1);
             this.Name = "Loader";
             this.Text = "OpenDataProject";
             this.Load += new System.EventHandler(this.OpenDataProject_Loader_Load);
@@ -119,8 +109,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button Filter;
         private System.Windows.Forms.Button Sort;
         private System.Windows.Forms.Button Ptable;
