@@ -1,6 +1,6 @@
 ﻿namespace OpenDataProject
 {
-    partial class OpenDataProject_Loader
+    partial class Loader
     {
         /// <summary>
         /// Required designer variable.

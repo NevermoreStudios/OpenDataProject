@@ -67,26 +67,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OpenDataProject_Loader.cs">
+    <Compile Include="Loader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OpenDataProject_Loader.Designer.cs">
-      <DependentUpon>OpenDataProject_Loader.cs</DependentUpon>
+    <Compile Include="Loader.Designer.cs">
+      <DependentUpon>Loader.cs</DependentUpon>
     </Compile>
-    <Compile Include="OpenDataProjectCore.cs" />
-    <Compile Include="OpenDataProject_Map.cs">
+    <Compile Include="Core.cs" />
+    <Compile Include="Map.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OpenDataProject_Map.Designer.cs">
-      <DependentUpon>OpenDataProject_Map.cs</DependentUpon>
+    <Compile Include="Map.Designer.cs">
+      <DependentUpon>Map.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="OpenDataProject_Loader.resx">
-      <DependentUpon>OpenDataProject_Loader.cs</DependentUpon>
+    <Compile Include="Skola.cs" />
+    <EmbeddedResource Include="Loader.resx">
+      <DependentUpon>Loader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OpenDataProject_Map.resx">
-      <DependentUpon>OpenDataProject_Map.cs</DependentUpon>
+    <EmbeddedResource Include="Map.resx">
+      <DependentUpon>Map.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

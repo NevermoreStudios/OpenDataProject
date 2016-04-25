@@ -1,29 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
-
 
 namespace OpenDataProject
 {
-    public partial class OpenDataProject_Loader : Form
+    public partial class Loader : Form
     {
-        public OpenDataProject_Loader()
-        {
-            InitializeComponent();
-            
-            }
-     
+        public Loader() { InitializeComponent(); }
+        
+        // TO DO: Parser
         private string DeStringize(string s)
         {if (!string.IsNullOrEmpty(s))
             {
@@ -36,6 +23,8 @@ namespace OpenDataProject
             }
             else return s;
         }
+
+        // TO DO: Parser
         private void Startup()
         {
 
@@ -77,12 +66,12 @@ namespace OpenDataProject
                     data[i] = DeStringize(data[i]);
                 }
                 try {
-                    OpenDataProjectCore.Skole.Add(new skola(int.Parse(data[0]), data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], int.Parse(data[12]), double.Parse(data[13]), double.Parse(data[14])));
+                    Core.Skole.Add(new Skola(int.Parse(data[0]), data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], int.Parse(data[12]), double.Parse(data[13]), double.Parse(data[14])));
                 }
                 catch { }
                 try
                 {
-                    OpenDataProjectCore.Skole.Add(new skola(int.Parse(data[0]), data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], int.Parse(data[14]), double.Parse(data[15]), double.Parse(data[16])));
+                    Core.Skole.Add(new Skola(int.Parse(data[0]), data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], int.Parse(data[14]), double.Parse(data[15]), double.Parse(data[16])));
                 }
                 catch { }
                 progressBar1.PerformStep();
@@ -100,32 +89,32 @@ namespace OpenDataProject
 
         private void OpenDataProject_Loader_Load(object sender, EventArgs e)
         {
-
+            // TO DO: Implement
         }
 
         private void Filter_Click(object sender, EventArgs e)
         {
-
+            // TO DO: Implement
         }
 
         private void Sort_Click(object sender, EventArgs e)
         {
-
+            // TO DO: Implement
         }
 
         private void Ptable_Click(object sender, EventArgs e)
         {
-
+            // TO DO: Implement
         }
 
         private void Pchart_Click(object sender, EventArgs e)
         {
-
+            // TO DO: Implement
         }
 
         private void Map_Click(object sender, EventArgs e)
         {
-            OpenDataProject_Map Map = new OpenDataProject_Map();
+            Map Map = new Map();
             Map.Show();
             
         }

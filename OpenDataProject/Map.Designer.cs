@@ -1,6 +1,6 @@
 ﻿namespace OpenDataProject
 {
-    partial class OpenDataProject_Map
+    partial class Map
     {
         /// <summary>
         /// Required designer variable.
