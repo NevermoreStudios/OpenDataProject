@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace OpenDataProject
 {
@@ -14,8 +13,6 @@ namespace OpenDataProject
             if (FilterKeyword == "All") return Skole;
             else if (FilterKeyword == "None") return new List<Skola> { };
             else return Queries[Linker.IndexOf(FilterKeyword)];
-
         }
     }
-
 }

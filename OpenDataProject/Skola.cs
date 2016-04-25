@@ -16,6 +16,7 @@ namespace OpenDataProject
         {
             return (new string[] { ID.ToString(), Ime, Adresa, PostanskiBroj, Mesto, Opstina, Okrug, SkolskaUprava, Sajt, Telefon, Fax, TipSkole, BrojOdeljenja.ToString(), Lat.ToString(), Lon.ToString() });
         }
+
         public override string ToString()
         {
             string s = "";
