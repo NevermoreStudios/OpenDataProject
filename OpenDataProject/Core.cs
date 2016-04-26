@@ -11,7 +11,7 @@ namespace OpenDataProject
         {
             if (FilterKeyword == "All") return Skole;
             else if (FilterKeyword == "None") return new List<Skola> { };
-            else return Queries[FilterKeyword];
+            else return Queries[FilterKeyword];//TEK TREBA DA SE NAPRAVI
         }
     }
 }
