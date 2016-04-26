@@ -10,10 +10,10 @@ namespace OpenDataProject
 {
     public partial class Map : Form
     {
-        string Keyword;
-        public Map(string Keyword)
+        List<Skola> Data;
+        public Map(List<Skola> Data)
         {
-            this.Keyword = Keyword;
+            this.Data = Data;
             InitializeComponent();
             try
             {
@@ -55,7 +55,7 @@ namespace OpenDataProject
         private void MainMap_Load(object sender, EventArgs e)
         {
             GMapOverlay overlay = new GMapOverlay("overlay");
-            foreach (Skola skola in Core.GetFilter(Keyword))
+            foreach (Skola skola in Data)
                 overlay.Markers.Add(new GMarkerGoogle(new PointLatLng(skola.Lat, skola.Lon),GMarkerGoogleType.red));
             MainMap.Overlays.Add(overlay);
         }

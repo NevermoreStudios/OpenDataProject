@@ -59,14 +59,15 @@
             this.MainMap.Zoom = 0D;
             this.MainMap.Load += new System.EventHandler(this.MainMap_Load);
             // 
-            // OpenDataProject_Map
+            // Map
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 438);
             this.Controls.Add(this.MainMap);
-            this.Name = "OpenDataProject_Map";
+            this.Name = "Map";
             this.Text = "OpenDataProject_Map";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.OpenDataProject_Map_Load);
             this.ResumeLayout(false);
 

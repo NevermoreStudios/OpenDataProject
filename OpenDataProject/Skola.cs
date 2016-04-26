@@ -7,14 +7,14 @@ using System.Windows.Forms;
 
 namespace OpenDataProject
 {
-    class Skola
+    public class Skola
     {
         public string id, odeljenja, naziv, adresa, pbroj, mesto, opstina, okrug, suprava, www, tel, fax, vrsta,gps;
         public double Lat, Lon;
 
         public string[] ToRow()
         {
-            return (new string[] { id.ToString(), naziv, adresa, pbroj, mesto, opstina, okrug, suprava, www, tel, fax, vrsta, odeljenja.ToString(), Lat.ToString(), Lon.ToString() });
+            return (new string[] { id, naziv, adresa, pbroj, mesto, opstina, okrug, suprava, www, tel, fax, vrsta, odeljenja, gps });
         }
 
 

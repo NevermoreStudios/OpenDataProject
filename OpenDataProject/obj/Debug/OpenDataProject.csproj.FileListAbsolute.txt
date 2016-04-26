@@ -13,3 +13,4 @@ C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProj
 C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\bin\Debug\Newtonsoft.Json.dll
 C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\bin\Debug\Newtonsoft.Json.xml
 C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Details.resources
+C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Viewer.resources

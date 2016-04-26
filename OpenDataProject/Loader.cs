@@ -28,21 +28,7 @@ namespace OpenDataProject
         // TO DO: Parser
         private void Startup()
         {
-            //dataGridView1.Columns.Add("ID", "ID");
-            //dataGridView1.Columns.Add("Ime", "Ime");
-            //dataGridView1.Columns.Add("Adresa", "Adresa");
-            //dataGridView1.Columns.Add("Postanski Broj", "Postanski Broj");
-            //dataGridView1.Columns.Add("Mesto", "Mesto");
-            //dataGridView1.Columns.Add("Opstina", "Opstina");
-            //dataGridView1.Columns.Add("Okrug", "Okrug");
-            //dataGridView1.Columns.Add("Skolska Uprava", "Skolska Uprava");
-            //dataGridView1.Columns.Add("Sajt", "Sajt");
-            //dataGridView1.Columns.Add("Telefon", "Telefon");
-            //dataGridView1.Columns.Add("Fax", "Fax");
-            //dataGridView1.Columns.Add("Tip Skole", "Tip Skole");
-            //dataGridView1.Columns.Add("Broj Odeljenja", "Broj Odeljenja");
-            //dataGridView1.Columns.Add("Latitude", "Latitude");
-            //dataGridView1.Columns.Add("Longitude", "Longitude");
+            
             try {
                 WebClient client = new WebClient();
                 client.DownloadFile("http://opendata.mpn.gov.rs/get.php?dataset=skole&lang=sr&term=json", "data.json");
@@ -96,14 +82,16 @@ namespace OpenDataProject
 
         private void Map_Click(object sender, EventArgs e)
         {
-            Map Map = new Map("All");
+            Map Map = new Map(Core.Skole);
             Map.Show();
             
         }
 
         private void View_Click(object sender, EventArgs e)
         {
-            //TO DO: Implement
+            Viewer Viewer = new Viewer(Core.Skole);
+            Viewer.Show();
+
         }
     }
 }
