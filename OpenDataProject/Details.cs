@@ -16,5 +16,10 @@ namespace OpenDataProject
         {
             InitializeComponent();
         }
+
+        private void Details_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

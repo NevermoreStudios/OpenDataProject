@@ -66,6 +66,7 @@ namespace OpenDataProject
             Ptable.Show();
             Pchart.Show();
             Map.Show();
+            View.Show();
         }
 
         private void OpenDataProject_Loader_Load(object sender, EventArgs e)
@@ -95,9 +96,14 @@ namespace OpenDataProject
 
         private void Map_Click(object sender, EventArgs e)
         {
-            Map Map = new Map();
+            Map Map = new Map("All");
             Map.Show();
             
+        }
+
+        private void View_Click(object sender, EventArgs e)
+        {
+            //TO DO: Implement
         }
     }
 }

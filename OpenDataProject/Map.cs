@@ -4,13 +4,16 @@ using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using System.Collections.Generic;
 
 namespace OpenDataProject
 {
     public partial class Map : Form
     {
-        public Map()
+        string Keyword;
+        public Map(string Keyword)
         {
+            this.Keyword = Keyword;
             InitializeComponent();
             try
             {
@@ -37,7 +40,6 @@ namespace OpenDataProject
         }
 
 
-
         private void MainMap_OnMarkerClick(GMapMarker item, MouseEventArgs e)
         {
             Skola res = Core.Skole.Find(skola => skola.Lat == item.Position.Lat && skola.Lon == item.Position.Lng);
@@ -53,7 +55,7 @@ namespace OpenDataProject
         private void MainMap_Load(object sender, EventArgs e)
         {
             GMapOverlay overlay = new GMapOverlay("overlay");
-            foreach (Skola skola in Core.GetFilter("All"))
+            foreach (Skola skola in Core.GetFilter(Keyword))
                 overlay.Markers.Add(new GMarkerGoogle(new PointLatLng(skola.Lat, skola.Lon),GMarkerGoogleType.red));
             MainMap.Overlays.Add(overlay);
         }

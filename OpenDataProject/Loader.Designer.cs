@@ -33,6 +33,7 @@
             this.Ptable = new System.Windows.Forms.Button();
             this.Pchart = new System.Windows.Forms.Button();
             this.Map = new System.Windows.Forms.Button();
+            this.View = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Filter
@@ -90,11 +91,23 @@
             this.Map.Visible = false;
             this.Map.Click += new System.EventHandler(this.Map_Click);
             // 
+            // View
+            // 
+            this.View.Location = new System.Drawing.Point(12, 14);
+            this.View.Name = "View";
+            this.View.Size = new System.Drawing.Size(259, 23);
+            this.View.TabIndex = 6;
+            this.View.Text = "View Data";
+            this.View.UseVisualStyleBackColor = true;
+            this.View.Visible = false;
+            this.View.Click += new System.EventHandler(this.View_Click);
+            // 
             // Loader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 196);
+            this.Controls.Add(this.View);
             this.Controls.Add(this.Map);
             this.Controls.Add(this.Pchart);
             this.Controls.Add(this.Ptable);
@@ -114,6 +127,7 @@
         private System.Windows.Forms.Button Ptable;
         private System.Windows.Forms.Button Pchart;
         private System.Windows.Forms.Button Map;
+        private System.Windows.Forms.Button View;
     }
 }
 
