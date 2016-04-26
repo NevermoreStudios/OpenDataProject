@@ -34,11 +34,12 @@
             this.Pchart = new System.Windows.Forms.Button();
             this.Map = new System.Windows.Forms.Button();
             this.View = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // Filter
             // 
-            this.Filter.Location = new System.Drawing.Point(13, 43);
+            this.Filter.Location = new System.Drawing.Point(13, 71);
             this.Filter.Name = "Filter";
             this.Filter.Size = new System.Drawing.Size(259, 23);
             this.Filter.TabIndex = 1;
@@ -49,7 +50,7 @@
             // 
             // Sort
             // 
-            this.Sort.Location = new System.Drawing.Point(12, 72);
+            this.Sort.Location = new System.Drawing.Point(12, 100);
             this.Sort.Name = "Sort";
             this.Sort.Size = new System.Drawing.Size(260, 23);
             this.Sort.TabIndex = 2;
@@ -60,7 +61,7 @@
             // 
             // Ptable
             // 
-            this.Ptable.Location = new System.Drawing.Point(12, 102);
+            this.Ptable.Location = new System.Drawing.Point(12, 130);
             this.Ptable.Name = "Ptable";
             this.Ptable.Size = new System.Drawing.Size(260, 23);
             this.Ptable.TabIndex = 3;
@@ -71,7 +72,7 @@
             // 
             // Pchart
             // 
-            this.Pchart.Location = new System.Drawing.Point(12, 132);
+            this.Pchart.Location = new System.Drawing.Point(12, 160);
             this.Pchart.Name = "Pchart";
             this.Pchart.Size = new System.Drawing.Size(260, 23);
             this.Pchart.TabIndex = 4;
@@ -82,7 +83,7 @@
             // 
             // Map
             // 
-            this.Map.Location = new System.Drawing.Point(12, 162);
+            this.Map.Location = new System.Drawing.Point(12, 190);
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(260, 23);
             this.Map.TabIndex = 5;
@@ -93,7 +94,7 @@
             // 
             // View
             // 
-            this.View.Location = new System.Drawing.Point(12, 14);
+            this.View.Location = new System.Drawing.Point(12, 42);
             this.View.Name = "View";
             this.View.Size = new System.Drawing.Size(259, 23);
             this.View.TabIndex = 6;
@@ -102,11 +103,19 @@
             this.View.Visible = false;
             this.View.Click += new System.EventHandler(this.View_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(13, 13);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(258, 23);
+            this.progressBar1.TabIndex = 7;
+            // 
             // Loader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 196);
+            this.ClientSize = new System.Drawing.Size(284, 224);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.View);
             this.Controls.Add(this.Map);
             this.Controls.Add(this.Pchart);
@@ -128,6 +137,7 @@
         private System.Windows.Forms.Button Pchart;
         private System.Windows.Forms.Button Map;
         private System.Windows.Forms.Button View;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 

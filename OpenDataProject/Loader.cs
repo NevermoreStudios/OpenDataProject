@@ -28,7 +28,7 @@ namespace OpenDataProject
         // TO DO: Parser
         private void Startup()
         {
-            
+            progressBar1.PerformStep();
             try {
                 WebClient client = new WebClient();
                 client.DownloadFile("http://opendata.mpn.gov.rs/get.php?dataset=skole&lang=sr&term=json", "data.json");
@@ -38,9 +38,12 @@ namespace OpenDataProject
                 MessageBox.Show("Nije moguce preuzeti najnoviju tabelu.\r\nKoristice se kesirana verzija.");
                 File.Copy("kes.json", "data.json",true);
             }
+            progressBar1.PerformStep();
             StreamReader sr = new StreamReader("data.json");
             string json=sr.ReadToEnd();
+            progressBar1.PerformStep();
             Core.Skole = JsonConvert.DeserializeObject<List<Skola>>(json);
+            progressBar1.PerformStep();
         }
 
 
@@ -53,6 +56,7 @@ namespace OpenDataProject
             Pchart.Show();
             Map.Show();
             View.Show();
+            progressBar1.Value = 100;
         }
 
         private void OpenDataProject_Loader_Load(object sender, EventArgs e)
@@ -82,15 +86,15 @@ namespace OpenDataProject
 
         private void Map_Click(object sender, EventArgs e)
         {
-            Map Map = new Map(Core.Skole);
-            Map.Show();
+            QueryPicker Q = new QueryPicker("Map");
+            Q.Show();
             
         }
 
         private void View_Click(object sender, EventArgs e)
         {
-            Viewer Viewer = new Viewer(Core.Skole);
-            Viewer.Show();
+            QueryPicker Q = new QueryPicker("Viewer");
+            Q.Show();
 
         }
     }

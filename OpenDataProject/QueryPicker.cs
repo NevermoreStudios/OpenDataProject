@@ -12,9 +12,31 @@ namespace OpenDataProject
 {
     public partial class QueryPicker : Form
     {
-        public QueryPicker()
+        string form;
+        public QueryPicker(string form)
         {
+            this.form = form;
             InitializeComponent();
+        }
+
+        private void QueryPicker_Load(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add("All");
+            comboBox1.Items.AddRange(Core.Queries.Keys.ToArray());
+            comboBox1.SelectedIndex = 0;
+        }
+
+        private void Pick_Click(object sender, EventArgs e)
+        {
+            switch (form)
+            {
+                case "Map": { Map Map = new Map(Core.GetFilter(comboBox1.SelectedItem.ToString())); Map.Show(); this.Close();
+                        break; }
+                case "Sort": { //to do
+                        break; }
+                case "View": { //to do;
+                        break; }
+            }
         }
     }
 }
