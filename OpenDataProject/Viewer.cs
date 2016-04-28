@@ -47,7 +47,12 @@ namespace OpenDataProject
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("cao");
+            try
+            {
+                Details det = new Details(Data.ElementAt(e.RowIndex));
+                det.ShowDialog();
+            }
+            catch { }
         }
     }
 }

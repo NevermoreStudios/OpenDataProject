@@ -44,7 +44,8 @@ namespace OpenDataProject
         {
             Skola res = Core.Skole.Find(skola => skola.Lat == item.Position.Lat && skola.Lon == item.Position.Lng);
             // TO DO: Visuelization
-            MessageBox.Show(res.ToString());
+            Details det = new Details(res);
+            det.ShowDialog();
         }
 
         private void OpenDataProject_Map_Load(object sender, EventArgs e)

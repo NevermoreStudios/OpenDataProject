@@ -34,7 +34,7 @@ namespace OpenDataProject
                         break; }
                 case "Sort": { //to do
                         break; }
-                case "View": { //to do;
+                case "Viewer": { Viewer Viewer = new Viewer(Core.GetFilter(comboBox1.SelectedItem.ToString())); Viewer.Show(); this.Close();
                         break; }
             }
         }

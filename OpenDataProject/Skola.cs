@@ -9,7 +9,7 @@ namespace OpenDataProject
 {
     public class Skola
     {
-        public int id, odeljenja;
+        public string id, odeljenja;
         public string naziv, adresa, pbroj, mesto, opstina, okrug, suprava, www, tel, fax, vrsta,gps;
         public double Lat, Lon;
 
@@ -21,7 +21,7 @@ namespace OpenDataProject
 
         public Skola(string ID, string Ime, string Adresa, string PostanskiBroj, string Mesto, string Opstina, string Okrug, string SkolskaUprava, string Sajt, string Telefon, string Fax, string TipSkole, string BrojOdeljenja, string Gps)
         {
-            this.id = int.Parse(ID);
+            this.id = ID;
             this.naziv = Ime;
             this.adresa = Adresa;
             this.pbroj = PostanskiBroj;
@@ -33,7 +33,7 @@ namespace OpenDataProject
             this.tel = Telefon;
             this.fax = Fax;
             this.vrsta = TipSkole;
-            this.odeljenja = int.Parse(BrojOdeljenja);
+            this.odeljenja = BrojOdeljenja;
             this.gps = Gps;
             char[] del ={' ', ',',';'};
             string[] coords=Gps.Split(del,StringSplitOptions.RemoveEmptyEntries);
