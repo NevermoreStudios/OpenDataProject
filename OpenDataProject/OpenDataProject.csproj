@@ -58,6 +58,10 @@
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NReco.PivotData, Version=1.2.6.0, Culture=neutral, PublicKeyToken=9ad162d4af1a824f, processorArchitecture=MSIL">
+      <HintPath>..\packages\NReco.PivotData.1.2.6.0\lib\net40\NReco.PivotData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -92,6 +96,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ptable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ptable.Designer.cs">
+      <DependentUpon>Ptable.cs</DependentUpon>
+    </Compile>
     <Compile Include="QueryPicker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +133,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ptable.resx">
+      <DependentUpon>Ptable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Viewer.resx">
       <DependentUpon>Viewer.cs</DependentUpon>
     </EmbeddedResource>

@@ -53,7 +53,6 @@ namespace OpenDataProject
             Filter.Show();
             Sort.Show();
             Ptable.Show();
-            Pchart.Show();
             Map.Show();
             View.Show();
             progressBar1.Value = 100;
@@ -75,11 +74,6 @@ namespace OpenDataProject
         }
 
         private void Ptable_Click(object sender, EventArgs e)
-        {
-            // TO DO: Implement
-        }
-
-        private void Pchart_Click(object sender, EventArgs e)
         {
             // TO DO: Implement
         }

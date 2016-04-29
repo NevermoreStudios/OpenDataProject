@@ -31,7 +31,6 @@
             this.Filter = new System.Windows.Forms.Button();
             this.Sort = new System.Windows.Forms.Button();
             this.Ptable = new System.Windows.Forms.Button();
-            this.Pchart = new System.Windows.Forms.Button();
             this.Map = new System.Windows.Forms.Button();
             this.View = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -70,20 +69,9 @@
             this.Ptable.Visible = false;
             this.Ptable.Click += new System.EventHandler(this.Ptable_Click);
             // 
-            // Pchart
-            // 
-            this.Pchart.Location = new System.Drawing.Point(12, 160);
-            this.Pchart.Name = "Pchart";
-            this.Pchart.Size = new System.Drawing.Size(260, 23);
-            this.Pchart.TabIndex = 4;
-            this.Pchart.Text = "Pivot Chart";
-            this.Pchart.UseVisualStyleBackColor = true;
-            this.Pchart.Visible = false;
-            this.Pchart.Click += new System.EventHandler(this.Pchart_Click);
-            // 
             // Map
             // 
-            this.Map.Location = new System.Drawing.Point(12, 190);
+            this.Map.Location = new System.Drawing.Point(11, 159);
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(260, 23);
             this.Map.TabIndex = 5;
@@ -114,11 +102,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 224);
+            this.ClientSize = new System.Drawing.Size(284, 191);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.View);
             this.Controls.Add(this.Map);
-            this.Controls.Add(this.Pchart);
             this.Controls.Add(this.Ptable);
             this.Controls.Add(this.Sort);
             this.Controls.Add(this.Filter);
@@ -134,7 +121,6 @@
         private System.Windows.Forms.Button Filter;
         private System.Windows.Forms.Button Sort;
         private System.Windows.Forms.Button Ptable;
-        private System.Windows.Forms.Button Pchart;
         private System.Windows.Forms.Button Map;
         private System.Windows.Forms.Button View;
         private System.Windows.Forms.ProgressBar progressBar1;
