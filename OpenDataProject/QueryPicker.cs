@@ -32,7 +32,7 @@ namespace OpenDataProject
             {
                 case "Map": { Map Map = new Map(Core.GetFilter(comboBox1.SelectedItem.ToString())); Map.Show(); this.Close();
                         break; }
-                case "Sort": { //to do
+                case "Sort": { Sort Sort=new Sort(Core.GetFilter(comboBox1.SelectedItem.ToString())); Sort.Show(); this.Close();
                         break; }
                 case "Viewer": { Viewer Viewer = new Viewer(Core.GetFilter(comboBox1.SelectedItem.ToString())); Viewer.Show(); this.Close();
                         break; }

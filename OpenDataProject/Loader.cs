@@ -70,7 +70,8 @@ namespace OpenDataProject
 
         private void Sort_Click(object sender, EventArgs e)
         {
-            // TO DO: Implement
+            QueryPicker Q = new QueryPicker("Sort");
+            Q.Show();
         }
 
         private void Ptable_Click(object sender, EventArgs e)
