@@ -62,9 +62,9 @@
             // 
             this.Ptable.Location = new System.Drawing.Point(12, 130);
             this.Ptable.Name = "Ptable";
-            this.Ptable.Size = new System.Drawing.Size(260, 23);
+            this.Ptable.Size = new System.Drawing.Size(259, 23);
             this.Ptable.TabIndex = 3;
-            this.Ptable.Text = "Pivot Table";
+            this.Ptable.Text = "Chart";
             this.Ptable.UseVisualStyleBackColor = true;
             this.Ptable.Visible = false;
             this.Ptable.Click += new System.EventHandler(this.Ptable_Click);
@@ -111,7 +111,6 @@
             this.Controls.Add(this.Filter);
             this.Name = "Loader";
             this.Text = "OpenDataProject";
-            this.Load += new System.EventHandler(this.OpenDataProject_Loader_Load);
             this.Shown += new System.EventHandler(this.OpenDataProject_Loader_Shown);
             this.ResumeLayout(false);
 

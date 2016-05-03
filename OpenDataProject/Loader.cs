@@ -58,10 +58,6 @@ namespace OpenDataProject
             progressBar1.Value = 100;
         }
 
-        private void OpenDataProject_Loader_Load(object sender, EventArgs e)
-        {
-            // TO DO: Implement
-        }
 
         private void Filter_Click(object sender, EventArgs e)
         {
@@ -76,7 +72,8 @@ namespace OpenDataProject
 
         private void Ptable_Click(object sender, EventArgs e)
         {
-            // TO DO: Implement
+            QueryPicker Q = new QueryPicker("Ptable");
+            Q.Show();
         }
 
         private void Map_Click(object sender, EventArgs e)
@@ -91,6 +88,12 @@ namespace OpenDataProject
             QueryPicker Q = new QueryPicker("Viewer");
             Q.Show();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            QueryPicker Q = new QueryPicker("Pchart");
+            Q.Show();
         }
     }
 }

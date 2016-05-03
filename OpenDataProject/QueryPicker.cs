@@ -36,6 +36,13 @@ namespace OpenDataProject
                         break; }
                 case "Viewer": { Viewer Viewer = new Viewer(Core.GetFilter(comboBox1.SelectedItem.ToString())); Viewer.Show(); this.Close();
                         break; }
+                case "Ptable": { Chart Ptable = new Chart(Core.GetFilter(comboBox1.SelectedItem.ToString())); Ptable.Show(); this.Close();
+                        break; }
+                case "Pchart":
+                    {
+                        // Ptable = new Pie(Core.GetFilter(comboBox1.SelectedItem.ToString())); Ptable.Show(); this.Close();
+                        break;
+                    }
             }
         }
     }

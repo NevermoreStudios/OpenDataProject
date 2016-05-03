@@ -23,8 +23,8 @@ namespace OpenDataProject
             {
                 MainMap.Manager.Mode = AccessMode.CacheOnly;
                 MessageBox.Show(
-                    "No internet connection avaible, going to CacheOnly mode.",
-                    "GMap.NET - Demo.WindowsForms",
+                    "Nije dostupna internet konekcija koriste se kesirani podatci.",
+                    "Map",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 );

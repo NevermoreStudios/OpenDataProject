@@ -30,7 +30,5 @@ C:\Users\Brnabic\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataP
 C:\Users\Brnabic\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Properties.Resources.resources
 C:\Users\Brnabic\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Viewer.resources
 C:\Users\Brnabic\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.csproj.GenerateResource.Cache
-C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\bin\Debug\NReco.PivotData.dll
-C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\bin\Debug\NReco.PivotData.xml
-C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Ptable.resources
 C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Sort.resources
+C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Chart.resources
