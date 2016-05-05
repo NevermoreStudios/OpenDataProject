@@ -118,6 +118,7 @@
     <Compile Include="Viewer.Designer.cs">
       <DependentUpon>Viewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vocab.cs" />
     <EmbeddedResource Include="Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +139,9 @@
     </Compile>
     <EmbeddedResource Include="Chart.resx">
       <DependentUpon>Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryPicker.resx">
+      <DependentUpon>QueryPicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sort.resx">
       <DependentUpon>Sort.cs</DependentUpon>

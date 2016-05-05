@@ -37,16 +37,16 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(13, 13);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(259, 21);
+            this.comboBox1.Size = new System.Drawing.Size(187, 21);
             this.comboBox1.TabIndex = 0;
             // 
             // Pick
             // 
             this.Pick.Location = new System.Drawing.Point(13, 41);
             this.Pick.Name = "Pick";
-            this.Pick.Size = new System.Drawing.Size(259, 23);
+            this.Pick.Size = new System.Drawing.Size(187, 23);
             this.Pick.TabIndex = 1;
-            this.Pick.Text = "Use";
+            this.Pick.Text = "(use)";
             this.Pick.UseVisualStyleBackColor = true;
             this.Pick.Click += new System.EventHandler(this.Pick_Click);
             // 
@@ -54,11 +54,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 76);
+            this.ClientSize = new System.Drawing.Size(212, 76);
             this.Controls.Add(this.Pick);
             this.Controls.Add(this.comboBox1);
+            this.MaximizeBox = false;
             this.Name = "QueryPicker";
-            this.Text = "QueryPicker";
+            this.ShowIcon = false;
+            this.Text = "(queryPickerTitle)";
             this.Load += new System.EventHandler(this.QueryPicker_Load);
             this.ResumeLayout(false);
 

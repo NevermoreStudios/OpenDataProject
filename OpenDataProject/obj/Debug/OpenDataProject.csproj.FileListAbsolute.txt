@@ -32,3 +32,22 @@ C:\Users\Brnabic\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataP
 C:\Users\Brnabic\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.csproj.GenerateResource.Cache
 C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Sort.resources
 C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Chart.resources
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\bin\Debug\OpenDataProject.exe.config
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.exe
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.pdb
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\bin\Debug\OpenDataProject.exe
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\bin\Debug\OpenDataProject.pdb
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\bin\Debug\GMap.NET.Core.dll
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.csprojResolveAssemblyReference.cache
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Details.resources
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Loader.resources
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Map.resources
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Properties.Resources.resources
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Chart.resources
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Sort.resources
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Viewer.resources
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.csproj.GenerateResource.Cache
+C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.QueryPicker.resources

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
@@ -11,89 +10,124 @@ namespace OpenDataProject
 {
     public partial class Loader : Form
     {
+        private Vocab vocab;
+
         public Loader() { InitializeComponent(); }
         
-        // TO DO: Parser
-        private string DeStringize(string s)
+        private void Loader_Load(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(s))
+            LoadVocab();
+            RefreshVocab();
+            DownloadData();
+            LoadData();
+            LoadLanguageChanger();
+        }
+
+        private void LoadVocab()
+        {
+            try
             {
-                if (s[0] == '"') return s.Substring(1, s.Length - 2);
-                else if (s[s.Length - 1] == '"') { return s.Substring(0, s.Length - 2); }
-                else { return s; }
+                StreamReader sr = new StreamReader("vocab.json");
+                Core.Dict = JsonConvert.DeserializeObject<Dictionary<string, Vocab>>(sr.ReadToEnd());
+                sr.Dispose();
+                sr.Close();
             }
-            else return s;
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                MessageBox.Show("An error occurred while loading dictionary data.");
+            }
         }
 
-        // TO DO: Parser
-        private void Startup()
+        private void RefreshVocab()
         {
-            progressBar1.PerformStep();
-            try {
+            vocab = Core.GetVocab();
+            Text = vocab.loaderTitle;
+            View.Text = vocab.viewData;
+            Filter.Text = vocab.filter;
+            Sort.Text = vocab.sort;
+            Ptable.Text = vocab.chart;
+            Map.Text = vocab.map;
+            ChangeLanguage.Text = vocab.changeLanguage;
+            OtherGroup.Text = vocab.other;
+            LanguageGroup.Text = vocab.language;
+            Help.Text = vocab.help;
+            About.Text = vocab.about;
+            ToolsGroup.Text = vocab.tools;
+        }
+
+        private void DownloadData()
+        {
+            try
+            {
                 WebClient client = new WebClient();
+                // TO DO: Redownload on vocab change
                 client.DownloadFile("http://opendata.mpn.gov.rs/get.php?dataset=skole&lang=sr&term=json", "data.json");
-                File.Copy("data.json", "kes.json",true);
+                File.Copy("data.json", "kes.json", true);
             }
-            catch{
-                MessageBox.Show("Nije moguce preuzeti najnoviju tabelu.\r\nKoristice se kesirana verzija.");
-                File.Copy("kes.json", "data.json",true);
+            catch
+            {
+                MessageBox.Show(vocab.Error("downloadData"));
+                File.Copy("kes.json", "data.json", true);
             }
-            progressBar1.PerformStep();
-            StreamReader sr = new StreamReader("data.json");
-            string json=sr.ReadToEnd();
-            progressBar1.PerformStep();
-            Core.Skole = JsonConvert.DeserializeObject<List<Skola>>(json);
-            progressBar1.PerformStep();
         }
 
-
-        private void OpenDataProject_Loader_Shown(object sender, EventArgs e)
+        private void LoadData()
         {
-            Startup();
-            Filter.Show();
-            Sort.Show();
-            Ptable.Show();
-            Map.Show();
-            View.Show();
-            progressBar1.Value = 100;
+            try
+            {
+                StreamReader sr = new StreamReader("data.json");
+                Core.Skole = JsonConvert.DeserializeObject<List<Skola>>(sr.ReadToEnd());
+                // C C C Lazo, kako si ovo mogao da zaboravis? :P
+                sr.Dispose();
+                sr.Close();
+            }
+            catch(IOException)
+            {
+                MessageBox.Show(vocab.Error("loadingData"));
+                Close();
+            }
         }
 
+        private void LoadLanguageChanger()
+        {
+            ChangeLanguageSelect.Items.AddRange(Core.Dict.Keys.ToArray());
+            ChangeLanguageSelect.SelectedIndex = 0;
+        }
 
         private void Filter_Click(object sender, EventArgs e)
         {
             // TO DO: Implement
         }
 
-        private void Sort_Click(object sender, EventArgs e)
+        private void ToolBaseClick(string tool)
         {
-            QueryPicker Q = new QueryPicker("Sort");
+            // TO DO: Mozda skratimo ovo na jednu liniju?
+            QueryPicker Q = new QueryPicker(tool);
             Q.Show();
         }
 
-        private void Ptable_Click(object sender, EventArgs e)
+        private void Sort_Click     (object a, EventArgs b) { ToolBaseClick("Sort");    }
+        private void Ptable_Click   (object a, EventArgs b) { ToolBaseClick("Ptable");  }
+        private void Map_Click      (object a, EventArgs b) { ToolBaseClick("Map");     }
+        private void View_Click     (object a, EventArgs b) { ToolBaseClick("Viewer");  }
+//      private void Pie_Click      (object a, EventArgs b) { ToolBaseClick("Pchart");  }
+        
+        private void ChangeLanguage_Click(object sender, EventArgs e)
         {
-            QueryPicker Q = new QueryPicker("Ptable");
-            Q.Show();
+            int index = ChangeLanguageSelect.SelectedIndex;
+            Core.CurrentLanguage = (string)ChangeLanguageSelect.Items[index];
+            RefreshVocab();
         }
 
-        private void Map_Click(object sender, EventArgs e)
+        private void Help_Click(object sender, EventArgs e)
         {
-            QueryPicker Q = new QueryPicker("Map");
-            Q.Show();
-            
+            // TO DO: Implement
         }
 
-        private void View_Click(object sender, EventArgs e)
+        private void About_Click(object sender, EventArgs e)
         {
-            QueryPicker Q = new QueryPicker("Viewer");
-            Q.Show();
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            QueryPicker Q = new QueryPicker("Pchart");
-            Q.Show();
+            // TO DO: Implement
         }
     }
 }
