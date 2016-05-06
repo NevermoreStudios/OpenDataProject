@@ -57,10 +57,10 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(191, 172);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 17);
+            this.radioButton1.Size = new System.Drawing.Size(71, 17);
             this.radioButton1.TabIndex = 2;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Rastuće";
+            this.radioButton1.Text = "(increase)";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -68,10 +68,10 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(191, 195);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(77, 17);
+            this.radioButton2.Size = new System.Drawing.Size(75, 17);
             this.radioButton2.TabIndex = 3;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Opadajuće";
+            this.radioButton2.Text = "(decrease)";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -80,7 +80,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Dodaj";
+            this.button1.Text = "(add)";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -90,7 +90,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Sortiraj";
+            this.button2.Text = "(sort)";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -106,7 +106,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.listBox1);
             this.Name = "Sort";
-            this.Text = "Sort";
+            this.Text = "(sort)";
             this.Load += new System.EventHandler(this.Sort_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

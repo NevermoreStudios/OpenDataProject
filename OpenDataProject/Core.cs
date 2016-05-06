@@ -15,7 +15,7 @@ namespace OpenDataProject
             Vocab vocab = GetVocab();
             if (FilterKeyword == vocab.all) return Skole;
             else if (FilterKeyword == vocab.none) return new List<Skola> { };
-            else return Queries[FilterKeyword]; // TO DO: Implement
+            else return Queries[FilterKeyword];
         }
 
         public static Vocab GetVocab()

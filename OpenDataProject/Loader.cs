@@ -78,7 +78,6 @@ namespace OpenDataProject
             {
                 StreamReader sr = new StreamReader("data.json");
                 Core.Skole = JsonConvert.DeserializeObject<List<Skola>>(sr.ReadToEnd());
-                // C C C Lazo, kako si ovo mogao da zaboravis? :P
                 sr.Dispose();
                 sr.Close();
             }
@@ -102,7 +101,6 @@ namespace OpenDataProject
 
         private void ToolBaseClick(string tool)
         {
-            // TO DO: Mozda skratimo ovo na jednu liniju?
             QueryPicker Q = new QueryPicker(tool);
             Q.Show();
         }
@@ -111,7 +109,6 @@ namespace OpenDataProject
         private void Ptable_Click   (object a, EventArgs b) { ToolBaseClick("Ptable");  }
         private void Map_Click      (object a, EventArgs b) { ToolBaseClick("Map");     }
         private void View_Click     (object a, EventArgs b) { ToolBaseClick("Viewer");  }
-//      private void Pie_Click      (object a, EventArgs b) { ToolBaseClick("Pchart");  }
         
         private void ChangeLanguage_Click(object sender, EventArgs e)
         {

@@ -26,7 +26,7 @@
         "phone": "Phone",
         "fax": "Fax",
         "type": "Type",
-        "classes": "Classes",
+        "numclasses": "Number of classes",
         "location": "Location",
         "county": "County",
         "errors": {

@@ -14,7 +14,7 @@ namespace OpenDataProject
         {
             string realReason;
             if (errors.TryGetValue(reason, out realReason)) return error + " " + realReason;
-            else return null; // Majke mi treba da smo debili ako se ovo desi
+            else return null;
         }
     }
 }
