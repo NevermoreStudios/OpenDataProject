@@ -61,7 +61,6 @@ namespace OpenDataProject
             try
             {
                 WebClient client = new WebClient();
-                // TO DO: Redownload on vocab change
                 client.DownloadFile("http://opendata.mpn.gov.rs/get.php?dataset=skole&lang=sr&term=json", "data.json");
                 File.Copy("data.json", "kes.json", true);
             }

@@ -132,7 +132,6 @@ namespace OpenDataProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Compare(Data[0], Data[1]);
             Data.Sort(Compare);
             Viewer Viewer=new Viewer(Data);
             Viewer.ShowDialog();

@@ -10,7 +10,6 @@ namespace OpenDataProject
         List<Skola> Data;
         Vocab vocab;
 
-        // Sve je dobro...
         public Chart(List<Skola> Data)
         {
             this.Data = Data;
@@ -18,7 +17,6 @@ namespace OpenDataProject
             RefreshVocab();
         }
         
-        // Sreca, sreca, radost...
         private void RefreshVocab()
         {
             vocab = Core.GetVocab();
@@ -26,7 +24,6 @@ namespace OpenDataProject
             View.Text = vocab.view;
         }
 
-        // Ovaj kod je lep...
         private void Chart_Load(object sender, EventArgs e)
         {
             Options1.Items.AddRange(vocab.chartOptions1);
@@ -35,22 +32,12 @@ namespace OpenDataProject
             Options2.SelectedIndex = 0;
         }
 
-        // Pa valjda se nece nista desiti lose u ovoj funkciji...
         private void View_Click(object sender, EventArgs e)
         {
             Chart1.Series.Clear();
             Dictionary<string, int> chart = new Dictionary<string, int>(); 
             foreach (Skola s in Data)
             {
-                /**
-                 * AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-                 * UPOMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOC
-                 * UMIREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEM
-                 * OVO JE GORE OD POOTIS.DLL
-                 * LAZO, DA LI SI TI NORMALAN?!?!?!
-                 * Pa dobro, barem radi...
-                 * Valjda...
-                 */
                 switch (Options1.SelectedIndex)
                 {
                     case 0:
