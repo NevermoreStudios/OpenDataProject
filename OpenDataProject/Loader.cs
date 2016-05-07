@@ -95,7 +95,8 @@ namespace OpenDataProject
 
         private void Filter_Click(object sender, EventArgs e)
         {
-            // TO DO: Implement
+            FFilter FFilter = new FFilter();
+            FFilter.Show();
         }
 
         private void ToolBaseClick(string tool)

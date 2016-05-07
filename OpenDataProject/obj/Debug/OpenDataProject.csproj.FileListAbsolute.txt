@@ -52,3 +52,4 @@ C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.V
 C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.csproj.GenerateResource.Cache
 C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.QueryPicker.resources
 C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.QueryPicker.resources
+C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.FFilter.resources

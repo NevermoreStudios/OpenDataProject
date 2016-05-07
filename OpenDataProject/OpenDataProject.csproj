@@ -78,6 +78,12 @@
     <Compile Include="Details.Designer.cs">
       <DependentUpon>Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="FFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFilter.Designer.cs">
+      <DependentUpon>FFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Loader.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     <Compile Include="Vocab.cs" />
     <EmbeddedResource Include="Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFilter.resx">
+      <DependentUpon>FFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loader.resx">
       <DependentUpon>Loader.cs</DependentUpon>
