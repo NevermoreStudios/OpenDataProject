@@ -65,11 +65,24 @@ namespace OpenDataProject
                         string str = (string)C.Value;
                         if (!string.IsNullOrWhiteSpace(str))
                         {
-                            if (srow[col] != str)
-                            {
-                                isit = false;
-                                goto row;
-                            }
+                                if (col==3 || col==12) {
+                                    int comp;
+                                    int.TryParse(srow[col], out comp);
+                                    if (!IntComp(comp,str))
+                                    {
+                                        isit = false;
+                                        goto row;
+                                    }
+
+                                }
+                                else
+                                {
+                                    if(srow[col] != str)
+                                    {
+                                        isit = false;
+                                        goto row;
+                                    }
+                                }
                         }
                     }
                     if (isit)
@@ -83,6 +96,162 @@ namespace OpenDataProject
                 end:;
             }
             return result;
+        }
+
+        private bool IntComp(int comp, string str)
+        {
+            string[] subs = str.Split(',');
+            bool isit = true;
+            int nr;
+            foreach (string s in subs)
+            {
+                if (s[0] == '>')
+                {
+                    if (s[1] == '=')
+                    {
+                        nr = int.Parse(s.Substring(2));
+                        if (!(comp>=nr)) {
+                            isit = false;
+                            goto End;
+                        }
+                    }
+                    else
+                    {
+                        nr = int.Parse(s.Substring(1));
+                            if (!(comp > nr))
+                        {
+                            isit = false;
+                            goto End;
+                        }
+                    }
+                }
+                else if (s[0] == '<')
+                {
+                    if (s[1] == '=')
+                    {
+                        nr = int.Parse(s.Substring(2));
+                        if (!(comp <= nr))
+                        {
+                            isit = false;
+                            goto End;
+                        }
+                    }
+                    else
+                    {
+                        nr = int.Parse(s.Substring(1));
+                        if (!(comp < nr))
+                        {
+                            isit = false;
+                            goto End;
+                        }
+                    }
+                }
+                else if (s[0] == '=')
+                {
+                    if (s[1] == '>')
+                    {
+                        nr = int.Parse(s.Substring(2));
+                        if(!(comp >= nr)) {
+                            isit = false;
+                            goto End;
+                        }
+                    }
+                    else if (s[1] == '<')
+                    {
+                        nr = int.Parse(s.Substring(2));
+                        if (!(comp >= nr))
+                        {
+                            isit = false;
+                            goto End;
+                        }
+                    }
+                    else
+                    {
+                        nr = int.Parse(s.Substring(1));
+                        if (!(comp == nr))
+                        {
+                            isit = false;
+                            goto End;
+                        }
+                    }
+                }
+                else {
+                    if (s[s.Length-1] == '>')
+                    {
+                        if (s[s.Length-2] == '=')
+                        {
+                            nr = int.Parse(s.Substring(0,s.Length-2));
+                            if (!(comp <= nr))
+                            {
+                                isit = false;
+                                goto End;
+                            }
+                        }
+                        else
+                        {
+                            nr = int.Parse(s.Substring(0,s.Length-1));
+                            if (!(comp < nr))
+                            {
+                                isit = false;
+                                goto End;
+                            }
+                        }
+                    }
+                    else if (s[s.Length-1] == '<')
+                    {
+                        if (s[s.Length-2] == '=')
+                        {
+                            nr = int.Parse(s.Substring(0,s.Length-2));
+                            if (!(comp >= nr))
+                            {
+                                isit = false;
+                                goto End;
+                            }
+                        }
+                        else
+                        {
+                            nr = int.Parse(s.Substring(0,s.Length-1));
+                            if (!(comp > nr))
+                            {
+                                isit = false;
+                                goto End;
+                            }
+                        }
+                    }
+                    else if (s[s.Length-1] == '=')
+                    {
+                        if (s[s.Length-2] == '>')
+                        {
+                            nr = int.Parse(s.Substring(0,s.Length-2));
+                            if (!(comp <= nr))
+                            {
+                                isit = false;
+                                goto End;
+                            }
+                        }
+                        else if (s[s.Length-2] == '<')
+                        {
+                            nr = int.Parse(s.Substring(0, s.Length - 2));
+                            if (!(comp >= nr))
+                            {
+                                isit = false;
+                                goto End;
+                            }
+                        }
+                        else
+                        {
+                            nr = int.Parse(s.Substring(0, s.Length - 1));
+                            if (!(comp == nr))
+                            {
+                                isit = false;
+                                goto End;
+                            }
+                        }
+                    }
+                }
+
+            }
+            End:;return isit;
         }
 
         private void Filt_Click(object sender, EventArgs e)
