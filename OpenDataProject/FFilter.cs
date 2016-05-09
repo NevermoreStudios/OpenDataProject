@@ -41,10 +41,32 @@ namespace OpenDataProject
 
         private void Query_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(Qname.Text)) { MessageBox.Show("Query mora imati ime"); }
+            if (string.IsNullOrWhiteSpace(Qname.Text)) { MessageBox.Show("Query mora imati ime"); }
             else
             {
-                Core.Queries.Add(Qname.Text,FilterS());
+                List<Skola> result = new List<Skola>();
+                try
+                {
+                    result = FilterS();
+                    try
+                    {
+                        Core.Queries.Add(Qname.Text, result);
+                        MessageBox.Show("Query Added");
+                    }
+                    catch
+                    {
+                        if (MessageBox.Show("Query vec postoji, overide","Error", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            Core.Queries[Qname.Text] = result;
+                        }
+
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Filter was not in corect format");
+                }
+                
             }
         }
 
@@ -256,8 +278,16 @@ namespace OpenDataProject
 
         private void Filt_Click(object sender, EventArgs e)
         {
-            Viewer VW = new Viewer(FilterS());
-            VW.ShowDialog();
+            try
+            {
+                Viewer VW = new Viewer(FilterS());
+                VW.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show("Filter was not in corect format");
+            }
+            
         }
     }
 }

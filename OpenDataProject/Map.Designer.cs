@@ -66,6 +66,7 @@
             this.ClientSize = new System.Drawing.Size(653, 438);
             this.Controls.Add(this.MainMap);
             this.Name = "Map";
+            this.ShowIcon = false;
             this.Text = "Map";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.OpenDataProject_Map_Load);

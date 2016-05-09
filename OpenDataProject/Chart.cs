@@ -82,7 +82,7 @@ namespace OpenDataProject
                                 {
                                     int a;
                                     int.TryParse(s.odeljenja, out a);
-                                    chart.Add(s.mesto,a);
+                                    chart.Add(s.mesto, a);
                                 }
                             }
                             else

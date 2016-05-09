@@ -132,6 +132,7 @@
             // 
             // ChangeLanguageSelect
             // 
+            this.ChangeLanguageSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ChangeLanguageSelect.FormattingEnabled = true;
             this.ChangeLanguageSelect.Location = new System.Drawing.Point(6, 48);
             this.ChangeLanguageSelect.Name = "ChangeLanguageSelect";

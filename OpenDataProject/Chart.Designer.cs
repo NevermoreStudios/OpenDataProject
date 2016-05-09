@@ -40,6 +40,7 @@
             // 
             // Options1
             // 
+            this.Options1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Options1.FormattingEnabled = true;
             this.Options1.Location = new System.Drawing.Point(12, 10);
             this.Options1.Name = "Options1";
@@ -48,6 +49,7 @@
             // 
             // Options2
             // 
+            this.Options2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Options2.FormattingEnabled = true;
             this.Options2.Location = new System.Drawing.Point(139, 10);
             this.Options2.Name = "Options2";
@@ -93,6 +95,7 @@
             this.Controls.Add(this.Options1);
             this.Controls.Add(this.Chart1);
             this.Name = "Chart";
+            this.ShowIcon = false;
             this.Text = "(chart)";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Chart_Load);

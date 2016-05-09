@@ -63,6 +63,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Viewer";
+            this.ShowIcon = false;
             this.Text = "Viewer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Viewer_Load);

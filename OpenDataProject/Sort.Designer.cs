@@ -46,6 +46,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 171);
             this.comboBox1.Name = "comboBox1";
@@ -106,6 +107,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.listBox1);
             this.Name = "Sort";
+            this.ShowIcon = false;
             this.Text = "(sort)";
             this.Load += new System.EventHandler(this.Sort_Load);
             this.ResumeLayout(false);
