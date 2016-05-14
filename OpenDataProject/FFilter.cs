@@ -93,7 +93,7 @@ namespace OpenDataProject
                                     if (!IntComp(comp,str))
                                     {
                                         isit = false;
-                                        goto row;
+                                        break;
                                     }
 
                                 }
@@ -102,7 +102,7 @@ namespace OpenDataProject
                                     if(srow[col] != str)
                                     {
                                         isit = false;
-                                        goto row;
+                                        break;
                                     }
                                 }
                         }
@@ -110,12 +110,12 @@ namespace OpenDataProject
                     if (isit)
                     {
                         result.Add(s);
-                        goto end;
+                            break;
                     }
-                    row:;
+                    
                 }
                 }
-                end:;
+                
             }
             return result;
         }
@@ -134,7 +134,7 @@ namespace OpenDataProject
                         nr = int.Parse(s.Substring(2));
                         if (!(comp>=nr)) {
                             isit = false;
-                            goto End;
+                            break;
                         }
                     }
                     else
@@ -143,7 +143,7 @@ namespace OpenDataProject
                             if (!(comp > nr))
                         {
                             isit = false;
-                            goto End;
+                            break;
                         }
                     }
                 }
@@ -155,7 +155,7 @@ namespace OpenDataProject
                         if (!(comp <= nr))
                         {
                             isit = false;
-                            goto End;
+                            break;
                         }
                     }
                     else
@@ -164,7 +164,7 @@ namespace OpenDataProject
                         if (!(comp < nr))
                         {
                             isit = false;
-                            goto End;
+                            break; 
                         }
                     }
                 }
@@ -175,7 +175,7 @@ namespace OpenDataProject
                         nr = int.Parse(s.Substring(2));
                         if(!(comp >= nr)) {
                             isit = false;
-                            goto End;
+                            break;
                         }
                     }
                     else if (s[1] == '<')
@@ -184,7 +184,7 @@ namespace OpenDataProject
                         if (!(comp >= nr))
                         {
                             isit = false;
-                            goto End;
+                            break;
                         }
                     }
                     else
@@ -193,71 +193,71 @@ namespace OpenDataProject
                         if (!(comp == nr))
                         {
                             isit = false;
-                            goto End;
+                            break;
                         }
                     }
                 }
                 else {
-                    if (s[s.Length-1] == '>')
+                    if (s[s.Length - 1] == '>')
                     {
-                        if (s[s.Length-2] == '=')
+                        if (s[s.Length - 2] == '=')
                         {
-                            nr = int.Parse(s.Substring(0,s.Length-2));
+                            nr = int.Parse(s.Substring(0, s.Length - 2));
                             if (!(comp <= nr))
                             {
                                 isit = false;
-                                goto End;
+                                break;
                             }
                         }
                         else
                         {
-                            nr = int.Parse(s.Substring(0,s.Length-1));
+                            nr = int.Parse(s.Substring(0, s.Length - 1));
                             if (!(comp < nr))
                             {
                                 isit = false;
-                                goto End;
+                                break;
                             }
                         }
                     }
-                    else if (s[s.Length-1] == '<')
+                    else if (s[s.Length - 1] == '<')
                     {
-                        if (s[s.Length-2] == '=')
-                        {
-                            nr = int.Parse(s.Substring(0,s.Length-2));
-                            if (!(comp >= nr))
-                            {
-                                isit = false;
-                                goto End;
-                            }
-                        }
-                        else
-                        {
-                            nr = int.Parse(s.Substring(0,s.Length-1));
-                            if (!(comp > nr))
-                            {
-                                isit = false;
-                                goto End;
-                            }
-                        }
-                    }
-                    else if (s[s.Length-1] == '=')
-                    {
-                        if (s[s.Length-2] == '>')
-                        {
-                            nr = int.Parse(s.Substring(0,s.Length-2));
-                            if (!(comp <= nr))
-                            {
-                                isit = false;
-                                goto End;
-                            }
-                        }
-                        else if (s[s.Length-2] == '<')
+                        if (s[s.Length - 2] == '=')
                         {
                             nr = int.Parse(s.Substring(0, s.Length - 2));
                             if (!(comp >= nr))
                             {
                                 isit = false;
-                                goto End;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            nr = int.Parse(s.Substring(0, s.Length - 1));
+                            if (!(comp > nr))
+                            {
+                                isit = false;
+                                break;
+                            }
+                        }
+                    }
+                    else if (s[s.Length - 1] == '=')
+                    {
+                        if (s[s.Length - 2] == '>')
+                        {
+                            nr = int.Parse(s.Substring(0, s.Length - 2));
+                            if (!(comp <= nr))
+                            {
+                                isit = false;
+                                break;
+                            }
+                        }
+                        else if (s[s.Length - 2] == '<')
+                        {
+                            nr = int.Parse(s.Substring(0, s.Length - 2));
+                            if (!(comp >= nr))
+                            {
+                                isit = false;
+                                break;
                             }
                         }
                         else
@@ -266,14 +266,23 @@ namespace OpenDataProject
                             if (!(comp == nr))
                             {
                                 isit = false;
-                                goto End;
+                                break;
                             }
+                        }
+                    }
+                    else
+                    {
+                        nr = int.Parse(s);
+                        if (!(comp == nr))
+                        {
+                            isit = false;
+                            break;
                         }
                     }
                 }
 
             }
-            End:;return isit;
+            return isit;
         }
 
         private void Filt_Click(object sender, EventArgs e)
