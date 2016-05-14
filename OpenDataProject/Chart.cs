@@ -35,6 +35,10 @@ namespace OpenDataProject
         private void View_Click(object sender, EventArgs e)
         {
             Chart1.Series.Clear();
+            Chart1.ResetAutoValues();
+            int height = Chart1.Height;
+            Chart1.Height = 1;
+            Chart1.Height = height;
             Dictionary<string, int> chart = new Dictionary<string, int>(); 
             foreach (Skola s in Data)
             {
