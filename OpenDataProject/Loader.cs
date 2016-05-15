@@ -16,11 +16,15 @@ namespace OpenDataProject
         
         private void Loader_Load(object sender, EventArgs e)
         {
+            Splash Splash = new Splash();
+            Splash.Show();
             LoadVocab();
             RefreshVocab();
             DownloadData();
             LoadData();
             LoadLanguageChanger();
+            Splash.Close();
+            Splash.Dispose();
         }
 
         private void LoadVocab()
@@ -124,7 +128,8 @@ namespace OpenDataProject
 
         private void About_Click(object sender, EventArgs e)
         {
-            // TO DO: Implement
+            About Ab = new About();
+            Ab.ShowDialog();
         }
     }
 }

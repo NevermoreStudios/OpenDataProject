@@ -181,6 +181,7 @@
             this.MaximizeBox = false;
             this.Name = "Loader";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "(loaderTitle)";
             this.Load += new System.EventHandler(this.Loader_Load);
             this.ToolsGroup.ResumeLayout(false);

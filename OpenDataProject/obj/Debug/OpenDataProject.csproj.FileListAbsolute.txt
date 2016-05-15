@@ -53,3 +53,5 @@ C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.c
 C:\Users\Pera\Github\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.QueryPicker.resources
 C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.QueryPicker.resources
 C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.FFilter.resources
+C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.About.resources
+C:\Users\TEMP\Documents\Visual Studio 2015\Projects\OpenDataProject\OpenDataProject\obj\Debug\OpenDataProject.Splash.resources

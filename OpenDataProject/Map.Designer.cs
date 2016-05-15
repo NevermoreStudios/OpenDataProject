@@ -67,6 +67,7 @@
             this.Controls.Add(this.MainMap);
             this.Name = "Map";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Map";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.OpenDataProject_Map_Load);

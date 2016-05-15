@@ -90,6 +90,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FFilter";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "(filter)";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FFilter_Load);

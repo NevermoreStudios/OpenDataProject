@@ -108,6 +108,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "Sort";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "(sort)";
             this.Load += new System.EventHandler(this.Sort_Load);
             this.ResumeLayout(false);

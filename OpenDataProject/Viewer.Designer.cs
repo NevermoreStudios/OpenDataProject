@@ -64,6 +64,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Viewer";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Viewer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Viewer_Load);

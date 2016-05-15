@@ -61,6 +61,7 @@
             this.MaximizeBox = false;
             this.Name = "QueryPicker";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "(queryPickerTitle)";
             this.Load += new System.EventHandler(this.QueryPicker_Load);
             this.ResumeLayout(false);

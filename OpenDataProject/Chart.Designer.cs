@@ -96,6 +96,7 @@
             this.Controls.Add(this.Chart1);
             this.Name = "Chart";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "(chart)";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Chart_Load);
