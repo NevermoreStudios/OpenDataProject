@@ -123,7 +123,7 @@ namespace OpenDataProject
 
         private void Help_Click(object sender, EventArgs e)
         {
-            // TO DO: Implement
+             System.Diagnostics.Process.Start("Help.pptx");
         }
 
         private void About_Click(object sender, EventArgs e)

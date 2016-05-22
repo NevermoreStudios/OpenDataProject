@@ -69,5 +69,30 @@ namespace OpenDataProject.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///    &quot;English&quot;: {
+        ///        &quot;viewData&quot;: &quot;View Data&quot;,
+        ///        &quot;filter&quot;: &quot;Filter&quot;,
+        ///        &quot;sort&quot;: &quot;Sort&quot;,
+        ///        &quot;chart&quot;: &quot;Chart&quot;,
+        ///        &quot;map&quot;: &quot;Map&quot;,
+        ///        &quot;changeLanguage&quot;: &quot;Change Language&quot;,
+        ///        &quot;error&quot;: &quot;An error occurred while&quot;,
+        ///        &quot;loaderTitle&quot;: &quot;Loader for Open Data Project v1.0&quot;,
+        ///        &quot;queryPickerTitle&quot;: &quot;Pick a query&quot;,
+        ///        &quot;other&quot;: &quot;Other&quot;,
+        ///        &quot;language&quot;: &quot;Language&quot;,
+        ///        &quot;help&quot;: &quot;Help&quot;,
+        ///        &quot;about&quot;: &quot;About&quot;,
+        ///        &quot;tools&quot;: &quot;Tools&quot;,
+        ///        &quot;use&quot;: &quot;U [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string vocab {
+            get {
+                return ResourceManager.GetString("vocab", resourceCulture);
+            }
+        }
     }
 }

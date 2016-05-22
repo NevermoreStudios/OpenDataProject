@@ -177,6 +177,7 @@
     <EmbeddedResource Include="Viewer.resx">
       <DependentUpon>Viewer.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\vocab.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -205,6 +206,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\cfc-splash-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\vocab.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
