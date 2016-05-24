@@ -67,7 +67,7 @@
             this.Query.Name = "Query";
             this.Query.Size = new System.Drawing.Size(150, 23);
             this.Query.TabIndex = 2;
-            this.Query.Text = "(add as query)";
+            this.Query.Text = "(addAsQuery)";
             this.Query.UseVisualStyleBackColor = true;
             this.Query.Click += new System.EventHandler(this.Query_Click);
             // 

@@ -10,21 +10,21 @@ namespace OpenDataProject
 {
     public partial class Map : Form
     {
-        List<Skola> Data;
+        private List<Skola> Data;
+        private Vocab vocab;
+
         public Map(List<Skola> Data)
         {
             this.Data = Data;
             InitializeComponent();
-            try
-            {
-                System.Net.IPHostEntry e = System.Net.Dns.GetHostEntry("www.google.com");
-            }
+            RefreshVocab();
+            try { System.Net.IPHostEntry e = System.Net.Dns.GetHostEntry("www.google.com"); }
             catch
             {
                 MainMap.Manager.Mode = AccessMode.CacheOnly;
                 MessageBox.Show(
-                    "Nije dostupna internet konekcija koriste se kesirani podatci.",
-                    "Map",
+                    vocab.Error("downloadData"),
+                    vocab.map,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 );
@@ -39,11 +39,16 @@ namespace OpenDataProject
             MainMap.OnMarkerClick += new MarkerClick(MainMap_OnMarkerClick);
         }
 
+        private void RefreshVocab()
+        {
+            vocab = Core.GetVocab();
+            Text = vocab.map;
+        }
 
         private void MainMap_OnMarkerClick(GMapMarker item, MouseEventArgs e)
         {
             Skola res = Core.Skole.Find(skola => skola.Lat == item.Position.Lat && skola.Lon == item.Position.Lng);
-            // TO DO: Visuelization
+            // TO DO: Visualization
             Details det = new Details(res);
             det.ShowDialog();
         }

@@ -1,42 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OpenDataProject
 {
     public partial class FFilter : Form
     {
-        public FFilter()
-        {
-            InitializeComponent();
-        }
+        private Vocab vocab;
+
+        public FFilter() { InitializeComponent(); }
 
         private void FFilter_Load(object sender, EventArgs e)
         {
-            dataGridView1.Columns.Add("ID", "ID");
-            dataGridView1.Columns.Add("Ime", "Ime");
-            dataGridView1.Columns.Add("Adresa", "Adresa");
-            dataGridView1.Columns.Add("Postanski Broj", "Postanski Broj");
-            dataGridView1.Columns.Add("Mesto", "Mesto");
-            dataGridView1.Columns.Add("Opstina", "Opstina");
-            dataGridView1.Columns.Add("Okrug", "Okrug");
-            dataGridView1.Columns.Add("Skolska Uprava", "Skolska Uprava");
-            dataGridView1.Columns.Add("Sajt", "Sajt");
-            dataGridView1.Columns.Add("Telefon", "Telefon");
-            dataGridView1.Columns.Add("Fax", "Fax");
-            dataGridView1.Columns.Add("Tip Skole", "Tip Skole");
-            dataGridView1.Columns.Add("Broj Odeljenja", "Broj Odeljenja");
-            dataGridView1.Columns.Add("Gps", "Gps");
+            RefreshVocab();
+            foreach (string s in vocab.GetRow()) dataGridView1.Columns.Add(s, s);
             foreach (DataGridViewColumn column in dataGridView1.Columns)
-            {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
-            }
+        }
+
+        private void RefreshVocab()
+        {
+            vocab = Core.GetVocab();
+            Text = vocab.filter;
+            Filt.Text = vocab.filter;
+            Query.Text = vocab.addAsQuery;
         }
 
         private void Query_Click(object sender, EventArgs e)
