@@ -21,7 +21,7 @@ namespace OpenDataProject
             Title.Text = name.Name;
             Version.Text = vocab.version + ": " + name.Version.ToString();
             Desc.Text = vocab.appdesc + "\r\n" + vocab.teammembers +
-                ":\r\n- " + vocab.mentor + " - Filip Marić (" + vocab.professor + " " + vocab.at + " " + vocab.mg + " " + vocab.at + " " + vocab.rg +
+                ":\r\n- " + vocab.mentor + " - Filip Marić (" + vocab.professor + " " + vocab.at + " " + vocab.mg + " " + vocab.and + " " + vocab.rg +
                 ")\r\n- Luka Simić (1. " + vocab.grade + " " + vocab.at + " " + vocab.rg +
                 ")\r\n- Lazar Premović (1. " + vocab.grade + " " + vocab.at + " " + vocab.rg +
                 ")\r\n- Mateja Brnabić (1. " + vocab.grade + " " + vocab.at + " " + vocab.rg +

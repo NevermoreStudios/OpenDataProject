@@ -94,7 +94,7 @@ namespace OpenDataProject
         private void LoadLanguageChanger()
         {
             ChangeLanguageSelect.Items.AddRange(Core.Dict.Keys.ToArray());
-            ChangeLanguageSelect.SelectedIndex = 0;
+            ChangeLanguageSelect.SelectedIndex =1;
         }
 
         private void Filter_Click(object sender, EventArgs e)

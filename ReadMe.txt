@@ -1,0 +1,1 @@
+Aplikcija se nalazi na lokaciji: OpenDataProject\bin\Release

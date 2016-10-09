@@ -8,7 +8,7 @@ namespace OpenDataProject
         public static List<Skola> Skole = new List<Skola>();
         public static Dictionary<string, List<Skola>> Queries = new Dictionary<string, List<Skola>>();
         public static Dictionary<string, Vocab> Dict = new Dictionary<string, Vocab>();
-        public static string CurrentLanguage = "English";
+        public static string CurrentLanguage = "Srpski";
 
         public static List<Skola> GetFilter(string FilterKeyword)
         {
